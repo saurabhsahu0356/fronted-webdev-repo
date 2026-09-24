@@ -44,9 +44,9 @@ nav{
     background-color: var(--tri1);
 }
 section.allElement{
-    width: 100%;
-    height: 100%;
-    padding: 40px;
+ width: 100%;
+ height: 100%;
+  padding: 40px;
   padding-top: 80px;
   display: flex;
   flex-wrap: wrap;
@@ -54,11 +54,26 @@ section.allElement{
   gap:20px;
 }
 .elem{
-    background-color: #FEBA17;
-    padding: 20px 30px;
     height: 300px;
     width: 220px;
-    font-size: 30px;
-    border-radius: 10px;
-
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all ease 0.2s;
+    
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.elem h4{
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    font-weight: 500;
+    font-size: 25px;
+}
+.elem:active{
+  scale:0.97;
 }
