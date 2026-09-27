@@ -1,0 +1,43 @@
+@font-face {
+    font-family: ram;
+    src: url(./Witchwoode-Regular.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.box{
+    color: rgb(75, 111, 140);
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    background-image: url(731.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    font-size: 50px;
+    font-family:ram;
+    font-weight: 300;
+    padding: 60px;
+    text-transform: uppercase;
+}
+
+button{
+    color:white;
+    font-size: 10px;
+    padding: 10px 10px;
+   background-color: orange;
+   font-weight: 600;
+   border: none;
+}
+button:hover{
+    background-color: darkgreen;
+    transform: scale(1.05);
+}
