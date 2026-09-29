@@ -1,0 +1,53 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: black;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+/* inline & block element study hedding defult main block hota hai  */
+h1{
+    background-color: blue;
+    display: inline-block;
+}
+/* understand a class property to use */
+
+#parrent{
+    height: 40%;
+    width: 40%;
+    background-color: bisque;
+    border-radius: 10%;
+    border: none;
+    margin-top: 40px;
+    margin: 40px;  
+}
+/* do not classified the child class */
+
+.child{
+    height: 20px;
+    width: 20px;
+    background-color: brown;
+}
+
+/* selection method */
+
+.child:nth-child(2){
+    background-color: aquamarine;
+}
+.child:nth-last-child(1){
+    background-color: blue;
+}
+h2{
+    font-size: 100px;
+    color:transparent;
+    background-image: url(./batman.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    background-clip: text;
+}
+
