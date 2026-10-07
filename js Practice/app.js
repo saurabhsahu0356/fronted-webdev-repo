@@ -1,68 +1,45 @@
-// basic class structure 
-class Animal{
-    constructor(){
-        this.name = "dog";
-        this.years=5;
-    }
-}
-Animal.prototype.sanslo=()=>{
-    console.log ("hey");
-}
-Animal.prototype.khana =()=>{
-    console.log ("hello");
-}
-let a=new Animal();
-console.log(a);
+// lern Promises
+// async  await
+//settimeout and setinterval
 
-//this ki value
-
-//global main..... window hoti hai
-console.log(this);
-
-function abcd (){
-   console.log(this); // window 
-}
-
-let obj ={
-    name:"saurabh sahu",
-    class: "master",
-    fnc: function(){
-        console.log(this)  // object hoti hai 
-    }
-};
-obj.fnc(); 
- 
-
-//Synchronous & Asynchronous  Approach 
-
-// Synchronous = code ko step by step Excute karta hai 
- // Asynchronous = jo kamm phale ho rha use excute karo jo time le rha use side main karke
- // agla code ya function run karo 
-
-
-console.log("hai");
-
-setTimeout(function(){
-    console.log("hello bahi");
-},2000);
-
-console.log("hello world");
-console.log("this is result");
-
-// callback = ek function ak ander function ,function jo turant na chale aur kaam 
-// hone ke badd chalega 
-
-getUserInsaId(function(){
-    // jab kaam complete hoga tab chalega 
+let prm = new Promise((resolve,rejected)=>{
+        setTimeout(()=>{
+               rejected(); /// crete a logic 
+        },3000)
 });
 
-// callBack hell = function ke ander ak aur function ,function phir ak aur function 
-function abc(fnc){
-   fnc();
+  prm.then(()=>{
+     console.log("haiiiiii") // resolve hoga jo bi work hoga is function se hoga 
+ });
+
+  prm.catch(()=>{
+     console.log("hai world"); //rejected hoga jo bi work hoga is function se hoga 
+ });
+
+
+// 2.async await => Promise pe kamm karta hai ;
+
+function getData(){
+    
+ return new Promise((resolve,rejected)=>{
+        setTimeout(()=>{
+            let num = Math.floor(Math.random()*10);
+            if(num<5){
+                resolve(true)
+            }
+            else{
+                rejected(false);
+            }
+        },3000)
+});
+
 }
-abc(function(){
-    console.log("hello");
-})
+
+async function abcd() {
+   let num=  await getData();
+   console.log(num);
+}
+abcd();
 
 
 
